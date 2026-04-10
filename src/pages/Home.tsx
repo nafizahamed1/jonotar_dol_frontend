@@ -3,14 +3,14 @@ const Home = () => {
     <div className="overflow-x-hidden">
 
       {/* HERO */}
-      <section className="bg-secondary text-white py-16 sm:py-20">
+      <section className="bg-gradient-to-r from-green-700 to-green-500 text-white py-16 sm:py-20">
         <div className="container flex flex-col items-center justify-center gap-6 text-center">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-            Building a Stronger & Transparent Future
+           জনতার দল 
           </h1>
 
           <p className="max-w-2xl text-sm sm:text-base md:text-lg text-gray-200">
-            A modern political platform for citizens, leaders & change makers.
+            ন্যায় ও ইনসাফের প্রতিশ্রুতি ইনসাফ জিন্দাবাদ 
           </p>
 
           <div className="mt-6 flex w-full flex-col items-center gap-3 sm:flex-row sm:justify-center">
