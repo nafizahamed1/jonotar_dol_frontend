@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, type ChangeEvent, type FormEvent } from "react";
 
 const Contact = () => {
   const [form, setForm] = useState({
@@ -7,42 +7,42 @@ const Contact = () => {
     message: "",
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     alert("Message sent!");
   };
 
   return (
-    <div>
-      <h1 className="text-3xl font-bold">Contact Us</h1>
+    <div className="container py-10">
+      <h1 className="text-3xl sm:text-4xl font-bold">Contact Us</h1>
 
-      <form onSubmit={handleSubmit} className="space-y-4 mt-4">
+      <form onSubmit={handleSubmit} className="space-y-4 mt-4 max-w-2xl">
         <input
           name="name"
           placeholder="Name"
-          className="border p-2 w-full"
+          className="border border-gray-300 rounded-lg w-full px-4 py-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-primary transition"
           onChange={handleChange}
         />
 
         <input
           name="email"
           placeholder="Email"
-          className="border p-2 w-full"
+          className="border border-gray-300 rounded-lg w-full px-4 py-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-primary transition"
           onChange={handleChange}
         />
 
         <textarea
           name="message"
           placeholder="Message"
-          className="border p-2 w-full"
+          className="border border-gray-300 rounded-lg w-full px-4 py-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-primary transition min-h-[160px]"
           onChange={handleChange}
         />
 
-        <button className="bg-red-600 text-white px-4 py-2">
+        <button className="w-full sm:w-auto bg-red-600 text-white px-6 py-3 rounded-lg text-sm sm:text-base">
           Send
         </button>
       </form>

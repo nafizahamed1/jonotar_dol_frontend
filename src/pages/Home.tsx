@@ -1,23 +1,23 @@
 const Home = () => {
   return (
-    <div>
+    <div className="overflow-x-hidden">
 
       {/* HERO */}
-      <section className="bg-secondary text-white py-24">
-        <div className="container text-center">
-          <h1 className="text-5xl font-bold leading-tight">
+      <section className="bg-secondary text-white py-16 sm:py-20">
+        <div className="container flex flex-col items-center justify-center gap-6 text-center">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
             Building a Stronger & Transparent Future
           </h1>
 
-          <p className="mt-4 text-lg text-gray-200">
+          <p className="max-w-2xl text-sm sm:text-base md:text-lg text-gray-200">
             A modern political platform for citizens, leaders & change makers.
           </p>
 
-          <div className="mt-6 flex justify-center gap-4">
-            <button className="bg-primary px-6 py-2 rounded font-semibold">
+          <div className="mt-6 flex w-full flex-col items-center gap-3 sm:flex-row sm:justify-center">
+            <button className="w-full sm:w-auto bg-primary px-6 py-3 rounded-lg font-semibold text-sm sm:text-base">
               Latest News
             </button>
-            <button className="bg-white text-secondary px-6 py-2 rounded font-semibold">
+            <button className="w-full sm:w-auto bg-white text-secondary px-6 py-3 rounded-lg font-semibold text-sm sm:text-base">
               Join Movement
             </button>
           </div>
@@ -25,21 +25,21 @@ const Home = () => {
       </section>
 
       {/* STATS SECTION */}
-      <section className="container grid grid-cols-1 md:grid-cols-3 gap-6 py-16">
+      <section className="container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 py-12">
 
-        <div className="bg-white shadow-lg p-6 rounded text-center">
-          <h2 className="text-3xl font-bold text-primary">10K+</h2>
-          <p>Supporters</p>
+        <div className="bg-white shadow-lg p-6 rounded-xl text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold text-primary">10K+</h2>
+          <p className="text-sm sm:text-base">Supporters</p>
         </div>
 
-        <div className="bg-white shadow-lg p-6 rounded text-center">
-          <h2 className="text-3xl font-bold text-primary">150+</h2>
-          <p>Events</p>
+        <div className="bg-white shadow-lg p-6 rounded-xl text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold text-primary">150+</h2>
+          <p className="text-sm sm:text-base">Events</p>
         </div>
 
-        <div className="bg-white shadow-lg p-6 rounded text-center">
-          <h2 className="text-3xl font-bold text-primary">25+</h2>
-          <p>Leaders</p>
+        <div className="bg-white shadow-lg p-6 rounded-xl text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold text-primary">25+</h2>
+          <p className="text-sm sm:text-base">Leaders</p>
         </div>
 
       </section>

@@ -39,6 +39,7 @@
     margin: 0;
     background-color: var(--bg);
     color: var(--text);
+    overflow-x: hidden;
   }
 
   h1,
