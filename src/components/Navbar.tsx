@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import logo from "../assets/janotar_dol_logo.svg";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -8,6 +9,7 @@ const Navbar = () => {
     <nav className="bg-red-600 text-white">
       <div className="container flex items-center justify-between gap-4 py-4">
         <div className="flex items-center gap-3">
+          <img src={logo} alt="জনতার দল logo" className="h-10 w-10 rounded-full object-cover" />
           <span className="text-xl sm:text-2xl font-bold">জনতার দল</span>
         </div>
 
