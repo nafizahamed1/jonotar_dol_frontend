@@ -1,3 +1,5 @@
+import VideoSlider from "../components/VideoSlider";
+
 const Home = () => {
   return (
     <div className="overflow-x-hidden">
@@ -24,20 +26,24 @@ const Home = () => {
         </div>
       </section>
 
+      {/* VIDEO SLIDER */}
+     <section>
+  <VideoSlider />
+</section>
       {/* STATS SECTION */}
       <section className="container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 py-12">
 
-        <div className="bg-white shadow-lg p-6 rounded-xl text-center">
+        <div className="bg-green-100 shadow-lg p-6 rounded-xl text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-primary">10K+</h2>
           <p className="text-sm sm:text-base">Supporters</p>
         </div>
 
-        <div className="bg-white shadow-lg p-6 rounded-xl text-center">
+        <div className="bg-green-100 shadow-lg p-6 rounded-xl text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-primary">150+</h2>
           <p className="text-sm sm:text-base">Events</p>
         </div>
 
-        <div className="bg-white shadow-lg p-6 rounded-xl text-center">
+        <div className="bg-green-100 shadow-lg p-6 rounded-xl text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-primary">25+</h2>
           <p className="text-sm sm:text-base">Leaders</p>
         </div>

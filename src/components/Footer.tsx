@@ -56,61 +56,61 @@ const Footer = () => {
             </div>
 
             {/* Social Buttons */}
-           <div className="mt-4 flex flex-wrap gap-3">
+               <div className="mt-4 flex flex-wrap gap-3">
 
-  {/* Facebook */}
-  <a
-    href="https://www.facebook.com/1JanotarDol/"
-    target="_blank"
-    className="flex items-center gap-2 bg-white text-green-700 hover:bg-gray-100 px-3 py-2 rounded-lg text-sm transition font-semibold"
-  >
-    <FaFacebook className="text-blue-600 text-lg" />
-    Facebook
-  </a>
+                {/* Facebook */}
+                <a
+                  href="https://www.facebook.com/1JanotarDol/"
+                  target="_blank"
+                  className="flex items-center gap-2 bg-white text-green-700 hover:bg-gray-100 px-3 py-2 rounded-lg text-sm transition font-semibold"
+                >
+                  <FaFacebook className="text-blue-600 text-lg" />
+                  Facebook
+                </a>
 
-  {/* YouTube */}
-  <a
-    href="#"
-    target="_blank"
-    className="flex items-center gap-2 bg-white text-green-700 hover:bg-gray-100 px-3 py-2 rounded-lg text-sm transition font-semibold"
-  >
-    <FaYoutube className="text-red-600 text-lg" />
-    YouTube
-  </a>
+                {/* YouTube */}
+                <a
+                  href="https://www.youtube.com/@janotardol"
+                  target="_blank"
+                  className="flex items-center gap-2 bg-white text-green-700 hover:bg-gray-100 px-3 py-2 rounded-lg text-sm transition font-semibold"
+                >
+                  <FaYoutube className="text-red-600 text-lg" />
+                  YouTube
+                </a>
 
-  {/* X */}
-  <a
-    href="#"
-    target="_blank"
-    className="flex items-center gap-2 bg-white text-green-700 hover:bg-gray-100 px-3 py-2 rounded-lg text-sm transition font-semibold"
-  >
-    <FaXTwitter className="text-black text-lg" />
-    X
-  </a>
+                {/* X */}
+                <a
+                  href="#"
+                  target="_blank"
+                  className="flex items-center gap-2 bg-white text-green-700 hover:bg-gray-100 px-3 py-2 rounded-lg text-sm transition font-semibold"
+                >
+                  <FaXTwitter className="text-black text-lg" />
+                  X
+                </a>
 
-  {/* WhatsApp */}
-  <a
-    href="#"
-    target="_blank"
-    className="flex items-center gap-2 bg-white text-green-700 hover:bg-gray-100 px-3 py-2 rounded-lg text-sm transition font-semibold"
-  >
-    <FaWhatsapp className="text-green-600 text-lg" />
-    WhatsApp
-  </a>
+                {/* WhatsApp */}
+                <a
+                  href="#"
+                  target="_blank"
+                  className="flex items-center gap-2 bg-white text-green-700 hover:bg-gray-100 px-3 py-2 rounded-lg text-sm transition font-semibold"
+                >
+                  <FaWhatsapp className="text-green-600 text-lg" />
+                  WhatsApp
+                </a>
 
- 
+              
 
-  {/* Telegram */}
-  <a
-    href="#"
-    target="_blank"
-    className="flex items-center gap-2 bg-white text-green-700 hover:bg-gray-100 px-3 py-2 rounded-lg text-sm transition font-semibold"
-  >
-    <FaTelegram className="text-sky-500 text-lg" />
-    Telegram
-  </a>
+                {/* Telegram */}
+                <a
+                  href="#"
+                  target="_blank"
+                  className="flex items-center gap-2 bg-white text-green-700 hover:bg-gray-100 px-3 py-2 rounded-lg text-sm transition font-semibold"
+                >
+                  <FaTelegram className="text-sky-500 text-lg" />
+                  Telegram
+                </a>
 
-</div>
+              </div>
           </div>
 
         </div>
