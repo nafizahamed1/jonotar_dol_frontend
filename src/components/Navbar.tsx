@@ -1,95 +1,92 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/janotar_dol_logo.svg";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
+
+  const navLinks = [
+    { name: "Home", path: "/" },
+    { name: "News", path: "/news" },
+    { name: "Leaders", path: "/leaders" },
+    { name: "Events", path: "/events" },
+    { name: "Manifesto", path: "/manifesto" },
+    { name: "Contact", path: "/contact" },
+  ];
 
   return (
-    <nav className="bg-red-600 text-white">
-      <div className="container flex items-center justify-between gap-4 py-4">
-        <div className="flex items-center gap-3">
-          <img src={logo} alt="জনতার দল logo" className="h-10 w-10 rounded-full object-cover" />
-          <span className="text-xl sm:text-2xl font-bold">জনতার দল</span>
+    <nav className="bg-red-600 text-white sticky top-0 z-50 shadow-md">
+      
+      <div className="w-full max-w-6xl mx-auto flex items-center justify-between px-4 sm:px-6 py-3">
+
+        {/* Logo */}
+        <div className="flex items-center gap-2 sm:gap-3">
+          <img
+            src={logo}
+            alt="জনতার দল logo"
+            className="h-8 w-8 sm:h-10 sm:w-10 rounded-full object-cover"
+          />
+          <span className="text-lg sm:text-xl font-bold">
+            জনতার দল
+          </span>
         </div>
 
+        {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-6 text-sm sm:text-base">
-          <Link to="/" className="hover:text-gray-200 transition">
-            Home
-          </Link>
-          <Link to="/news" className="hover:text-gray-200 transition">
-            News
-          </Link>
-          <Link to="/leaders" className="hover:text-gray-200 transition">
-            Leaders
-          </Link>
-          <Link to="/events" className="hover:text-gray-200 transition">
-            Events
-          </Link>
-          <Link to="/contact" className="hover:text-gray-200 transition">
-            Contact
-          </Link>
+          {navLinks.map((link) => (
+            <Link
+              key={link.path}
+              to={link.path}
+              className={`transition ${
+                location.pathname === link.path
+                  ? "text-green-300 font-semibold"
+                  : "hover:text-gray-200"
+              }`}
+            >
+              {link.name}
+            </Link>
+          ))}
         </div>
 
+        {/* Mobile Menu Button */}
         <button
-          type="button"
-          onClick={() => setMenuOpen((open) => !open)}
-          className="md:hidden rounded-lg border border-white/20 bg-red-700/90 p-2 text-white transition hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-white"
-          aria-label="Toggle menu"
+          onClick={() => setMenuOpen(!menuOpen)}
+          className="md:hidden p-2 rounded-lg bg-red-700/90 hover:bg-red-700 transition"
         >
-          <span className="sr-only">Toggle mobile menu</span>
           <div className="space-y-1">
-            <span className="block h-0.5 w-6 bg-white"></span>
-            <span className="block h-0.5 w-6 bg-white"></span>
-            <span className="block h-0.5 w-6 bg-white"></span>
+            <span className="block w-6 h-0.5 bg-white"></span>
+            <span className="block w-6 h-0.5 bg-white"></span>
+            <span className="block w-6 h-0.5 bg-white"></span>
           </div>
         </button>
       </div>
 
-      {menuOpen && (
-        <div className="md:hidden bg-red-700/95 px-4 pb-4">
-          <div className="flex flex-col gap-3 text-sm">
+      {/* Mobile Menu */}
+      <div
+        className={`md:hidden bg-red-700/95 px-4 transition-all duration-300 ${
+          menuOpen ? "max-h-96 py-4" : "max-h-0 overflow-hidden"
+        }`}
+      >
+        <div className="flex flex-col gap-2 text-sm">
+          {navLinks.map((link) => (
             <Link
-              to="/"
+              key={link.path}
+              to={link.path}
               onClick={() => setMenuOpen(false)}
-              className="block rounded-lg px-3 py-2 hover:bg-red-600 transition"
+              className={`block px-3 py-2 rounded-lg transition ${
+                location.pathname === link.path
+                  ? "bg-red-500 font-semibold"
+                  : "hover:bg-red-600"
+              }`}
             >
-              Home
+              {link.name}
             </Link>
-            <Link
-              to="/news"
-              onClick={() => setMenuOpen(false)}
-              className="block rounded-lg px-3 py-2 hover:bg-red-600 transition"
-            >
-              News
-            </Link>
-            <Link
-              to="/leaders"
-              onClick={() => setMenuOpen(false)}
-              className="block rounded-lg px-3 py-2 hover:bg-red-600 transition"
-            >
-              Leaders
-            </Link>
-            <Link
-              to="/events"
-              onClick={() => setMenuOpen(false)}
-              className="block rounded-lg px-3 py-2 hover:bg-red-600 transition"
-            >
-              Events
-            </Link>
-            <Link
-              to="/contact"
-              onClick={() => setMenuOpen(false)}
-              className="block rounded-lg px-3 py-2 hover:bg-red-600 transition"
-            >
-              Contact
-            </Link>
-          </div>
+          ))}
         </div>
-      )}
+      </div>
     </nav>
   );
 };
 
 export default Navbar;
-

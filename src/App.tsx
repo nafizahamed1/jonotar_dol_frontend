@@ -7,7 +7,7 @@ import News from "./pages/News";
 import Leaders from "./pages/Leaders";
 import Events from "./pages/Events";
 import Contact from "./pages/Contact";
-
+import Manifesto from "./pages/Manifesto";
 function App() {
   return (
     <BrowserRouter>
@@ -19,11 +19,13 @@ function App() {
           <Route path="/leaders" element={<Leaders />} />
           <Route path="/events" element={<Events />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/manifesto" element={<Manifesto />} />
         </Route>
       </Routes>
     </BrowserRouter>
   );
 }
+
 
 export default App;
 
