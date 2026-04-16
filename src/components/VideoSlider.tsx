@@ -26,7 +26,7 @@ const VideoSlider = () => {
 
       {/* Title */}
       <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6">
-        🎥 Latest Videos
+        Latest Videos
       </h2>
 
       {/* Thumbnail */}
