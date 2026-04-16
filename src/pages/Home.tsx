@@ -1,4 +1,5 @@
 import VideoSlider from "../components/VideoSlider";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -16,13 +17,24 @@ const Home = () => {
           </p>
 
           <div className="mt-6 flex w-full flex-col items-center gap-3 sm:flex-row sm:justify-center">
-            <button className="w-full sm:w-auto bg-primary px-6 py-3 rounded-lg font-semibold text-sm sm:text-base">
-              Latest News
-            </button>
-            <button className="w-full sm:w-auto bg-white text-secondary px-6 py-3 rounded-lg font-semibold text-sm sm:text-base">
-              Join Movement
-            </button>
-          </div>
+
+  {/* Latest News */}
+  <Link
+    to="/news"
+    className="w-full sm:w-auto bg-primary px-6 py-3 rounded-lg font-semibold text-sm sm:text-base text-center hover:bg-green-800 transition"
+  >
+    Latest News
+  </Link>
+
+  {/* Join Movement */}
+  <Link
+    to="/membership"
+    className="w-full sm:w-auto bg-white text-secondary px-6 py-3 rounded-lg font-semibold text-sm sm:text-base text-center hover:bg-gray-100 transition"
+  >
+    Join Movement
+  </Link>
+
+</div>
         </div>
       </section>
 
