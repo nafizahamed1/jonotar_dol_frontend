@@ -12,7 +12,7 @@ const VideoSlider = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % videos.length);
-    }, 4000000);
+    }, 4000);
 
     return () => clearInterval(interval);
   }, []);
