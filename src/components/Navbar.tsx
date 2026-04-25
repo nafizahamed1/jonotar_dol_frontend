@@ -19,7 +19,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="bg-gradient-to-r from-red-800 via-red-700 to-green-700 text-white sticky top-0 z-50 shadow-lg">
+    <nav className="bg-gradient-to-r from-red-800 via-red-700 to-green-700 text-white sticky top-0 z-50 shadow-lg backdrop-blur-md">
 
       <div className="w-full max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 py-3">
 
@@ -30,7 +30,7 @@ const Navbar = () => {
             alt="জনতার দল logo"
             className="h-8 w-8 sm:h-10 sm:w-10 rounded-full object-cover"
           />
-          <span className="text-lg sm:text-xl font-bold text-white">
+          <span className="text-lg sm:text-xl font-bold">
             জনতার দল
           </span>
         </div>
@@ -41,13 +41,18 @@ const Navbar = () => {
             <Link
               key={link.path}
               to={link.path}
-              className={`transition ${
+              className={`relative transition ${
                 location.pathname === link.path
-                  ? "text-green-300 font-semibold"
+                  ? "text-green-300"
                   : "hover:text-green-300"
               }`}
             >
               {link.name}
+
+              {/* underline animation */}
+              <span className={`absolute left-0 -bottom-1 h-[2px] bg-green-300 transition-all duration-300 ${
+                location.pathname === link.path ? "w-full" : "w-0 group-hover:w-full"
+              }`} />
             </Link>
           ))}
         </div>
@@ -55,11 +60,21 @@ const Navbar = () => {
         {/* Desktop Buttons */}
         <div className="hidden md:flex items-center gap-3">
 
-          <button className="bg-green-600 text-white px-4 py-2 rounded-md text-sm font-semibold hover:bg-green-700 transition">
+          <button className="px-4 py-2 rounded-md font-semibold text-white 
+          bg-gradient-to-r from-green-500 to-green-700 
+          shadow-[0_0_20px_rgba(34,197,94,0.6)] 
+          hover:shadow-[0_0_30px_rgba(34,197,94,0.9)] 
+          hover:scale-105 active:scale-95 
+          transition-all duration-300">
             Join Party
           </button>
 
-          <button className="border border-green-400 text-green-300 px-4 py-2 rounded-md text-sm font-semibold hover:bg-green-500/20 transition">
+          <button className="px-4 py-2 rounded-md font-semibold text-white 
+          bg-gradient-to-r from-red-500 to-green-700 
+          shadow-[0_0_20px_rgba(239,68,68,0.6)] 
+          hover:shadow-[0_0_30px_rgba(239,68,68,0.9)] 
+          hover:scale-105 active:scale-95 
+          transition-all duration-300">
             Donate
           </button>
 
@@ -82,7 +97,7 @@ const Navbar = () => {
       {/* Mobile Menu */}
       <div
         className={`md:hidden bg-gradient-to-b from-red-700 to-green-700 px-4 transition-all duration-300 ${
-          menuOpen ? "max-h-116 py-4" : "max-h-0 overflow-hidden"
+          menuOpen ? "max-h-[500px] py-4" : "max-h-0 overflow-hidden"
         }`}
       >
         <div className="flex flex-col gap-2 text-sm">
@@ -104,11 +119,15 @@ const Navbar = () => {
 
           <div className="flex gap-2 mt-3">
 
-            <button className="w-full px-4 py-2 rounded-md font-semibold text-white bg-gradient-to-r from-red-500 to-green-700 backdrop-blur-md shadow-[0_0_20px_rgba(34,197,94,0.6)] hover:shadow-[0_0_30px_rgba(34,197,94,0.9)] hover:scale-105 active:scale-95 transition-all duration-300">
-             Join Party
+            <button className="w-full px-4 py-2 rounded-md font-semibold text-white 
+            bg-gradient-to-r from-green-500 to-green-700 
+            shadow-lg hover:scale-105 transition">
+              Join Party
             </button>
 
-              <button className="w-full px-4 py-2 rounded-md font-semibold text-white bg-gradient-to-r from-green-500 to-green-700 backdrop-blur-md shadow-[0_0_20px_rgba(34,197,94,0.6)] hover:shadow-[0_0_30px_rgba(34,197,94,0.9)] hover:scale-105 active:scale-95 transition-all duration-300">
+            <button className="w-full px-4 py-2 rounded-md font-semibold text-white 
+            bg-gradient-to-r from-red-500 to-green-700 
+            shadow-lg hover:scale-105 transition">
               Donate
             </button>
 
@@ -116,6 +135,7 @@ const Navbar = () => {
 
         </div>
       </div>
+
     </nav>
   );
 };
