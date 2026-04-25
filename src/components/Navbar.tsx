@@ -21,7 +21,7 @@ const Navbar = () => {
       
       <div className="w-full max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 py-3">
 
-        {/* Logo */}
+       
         <div className="flex items-center gap-2 sm:gap-3">
           <img
             src={logo}
@@ -33,7 +33,7 @@ const Navbar = () => {
           </span>
         </div>
 
-        {/* Desktop Menu */}
+
         <div className="hidden md:flex items-center gap-6 text-sm sm:text-base font-medium">
           {navLinks.map((link) => (
             <Link
@@ -50,7 +50,7 @@ const Navbar = () => {
           ))}
         </div>
 
-        {/* Right Buttons */}
+   
         <div className="hidden md:flex items-center gap-3">
 
           <button className="bg-green-600 text-white px-4 py-2 rounded-md text-sm font-semibold hover:bg-green-700 transition">
@@ -63,7 +63,6 @@ const Navbar = () => {
 
         </div>
 
-        {/* Mobile Menu Button */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           className="md:hidden p-2 rounded-lg bg-green-200 hover:bg-green-300 transition"
@@ -76,7 +75,7 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Menu */}
+      
       <div
         className={`md:hidden bg-green-100 px-4 transition-all duration-300 ${
           menuOpen ? "max-h-96 py-4" : "max-h-0 overflow-hidden"
@@ -99,7 +98,7 @@ const Navbar = () => {
             </Link>
           ))}
 
-          {/* Mobile Buttons */}
+         
           <div className="flex gap-2 mt-3">
 
             <button className="bg-green-600 text-white px-4 py-2 rounded-md w-full">
