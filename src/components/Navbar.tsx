@@ -82,7 +82,7 @@ const Navbar = () => {
       {/* Mobile Menu */}
       <div
         className={`md:hidden bg-gradient-to-b from-red-700 to-green-700 px-4 transition-all duration-300 ${
-          menuOpen ? "max-h-96 py-4" : "max-h-0 overflow-hidden"
+          menuOpen ? "max-h-116 py-4" : "max-h-0 overflow-hidden"
         }`}
       >
         <div className="flex flex-col gap-2 text-sm">
