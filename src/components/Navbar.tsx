@@ -104,7 +104,7 @@ const Navbar = () => {
 
           <div className="flex gap-2 mt-3">
 
-            <button className="w-full px-4 py-2 rounded-md font-semibold text-white bg-gradient-to-r from-green-500 to-green-700 backdrop-blur-md shadow-[0_0_20px_rgba(34,197,94,0.6)] hover:shadow-[0_0_30px_rgba(34,197,94,0.9)] hover:scale-105 active:scale-95 transition-all duration-300">
+            <button className="w-full px-4 py-2 rounded-md font-semibold text-white bg-gradient-to-r from-red-500 to-green-700 backdrop-blur-md shadow-[0_0_20px_rgba(34,197,94,0.6)] hover:shadow-[0_0_30px_rgba(34,197,94,0.9)] hover:scale-105 active:scale-95 transition-all duration-300">
              Join Party
             </button>
 
