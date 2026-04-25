@@ -8,6 +8,8 @@ import Leaders from "./pages/Leaders";
 import Events from "./pages/Events";
 import Contact from "./pages/Contact";
 import Manifesto from "./pages/Manifesto";
+import Mission from "./pages/Mission";
+import Vision from "./pages/Vision";
 function App() {
   return (
     <BrowserRouter>
@@ -20,6 +22,9 @@ function App() {
           <Route path="/events" element={<Events />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/manifesto" element={<Manifesto />} />
+          <Route path="/mission" element={<Mission />} />
+          <Route path="/vision" element={<Vision />} />
+
         </Route>
       </Routes>
     </BrowserRouter>
