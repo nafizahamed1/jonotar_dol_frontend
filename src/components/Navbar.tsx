@@ -19,23 +19,23 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="bg-green-100 text-gray-800 sticky top-0 z-50 shadow-sm">
-      
+    <nav className="bg-gradient-to-r from-red-800 via-red-700 to-green-700 text-white sticky top-0 z-50 shadow-lg">
+
       <div className="w-full max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 py-3">
 
-       
+        {/* Logo */}
         <div className="flex items-center gap-2 sm:gap-3">
           <img
             src={logo}
             alt="জনতার দল logo"
             className="h-8 w-8 sm:h-10 sm:w-10 rounded-full object-cover"
           />
-          <span className="text-lg sm:text-xl font-bold text-green-700">
+          <span className="text-lg sm:text-xl font-bold text-white">
             জনতার দল
           </span>
         </div>
 
-
+        {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-6 text-sm sm:text-base font-medium">
           {navLinks.map((link) => (
             <Link
@@ -43,8 +43,8 @@ const Navbar = () => {
               to={link.path}
               className={`transition ${
                 location.pathname === link.path
-                  ? "text-green-700 font-semibold"
-                  : "hover:text-green-600"
+                  ? "text-green-300 font-semibold"
+                  : "hover:text-green-300"
               }`}
             >
               {link.name}
@@ -52,34 +52,36 @@ const Navbar = () => {
           ))}
         </div>
 
-   
+        {/* Desktop Buttons */}
         <div className="hidden md:flex items-center gap-3">
 
           <button className="bg-green-600 text-white px-4 py-2 rounded-md text-sm font-semibold hover:bg-green-700 transition">
             Join Party
           </button>
 
-          <button className="border border-green-600 text-green-700 px-4 py-2 rounded-md text-sm font-semibold hover:bg-green-200 transition">
+          <button className="border border-green-400 text-green-300 px-4 py-2 rounded-md text-sm font-semibold hover:bg-green-500/20 transition">
             Donate
           </button>
 
         </div>
 
+        {/* Mobile Button */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="md:hidden p-2 rounded-lg bg-green-200 hover:bg-green-300 transition"
+          className="md:hidden p-2 rounded-lg bg-white/20 hover:bg-white/30 transition"
         >
           <div className="space-y-1">
-            <span className="block w-6 h-0.5 bg-green-800"></span>
-            <span className="block w-6 h-0.5 bg-green-800"></span>
-            <span className="block w-6 h-0.5 bg-green-800"></span>
+            <span className="block w-6 h-0.5 bg-white"></span>
+            <span className="block w-6 h-0.5 bg-white"></span>
+            <span className="block w-6 h-0.5 bg-white"></span>
           </div>
         </button>
+
       </div>
 
-      
+      {/* Mobile Menu */}
       <div
-        className={`md:hidden bg-green-100 px-4 transition-all duration-300 ${
+        className={`md:hidden bg-gradient-to-b from-red-700 to-green-700 px-4 transition-all duration-300 ${
           menuOpen ? "max-h-96 py-4" : "max-h-0 overflow-hidden"
         }`}
       >
@@ -92,22 +94,21 @@ const Navbar = () => {
               onClick={() => setMenuOpen(false)}
               className={`block px-3 py-2 rounded-lg transition ${
                 location.pathname === link.path
-                  ? "bg-green-200 font-semibold"
-                  : "hover:bg-green-200"
+                  ? "bg-white/20 font-semibold"
+                  : "hover:bg-white/10"
               }`}
             >
               {link.name}
             </Link>
           ))}
 
-         
           <div className="flex gap-2 mt-3">
 
-            <button className="bg-green-600 text-white px-4 py-2 rounded-md w-full">
-              Join Party
+            <button className="w-full px-4 py-2 rounded-md font-semibold text-white bg-gradient-to-r from-green-500 to-green-700 backdrop-blur-md shadow-[0_0_20px_rgba(34,197,94,0.6)] hover:shadow-[0_0_30px_rgba(34,197,94,0.9)] hover:scale-105 active:scale-95 transition-all duration-300">
+             Join Party
             </button>
 
-            <button className="border border-green-600 text-green-700 px-4 py-2 rounded-md w-full">
+              <button className="w-full px-4 py-2 rounded-md font-semibold text-white bg-gradient-to-r from-green-500 to-green-700 backdrop-blur-md shadow-[0_0_20px_rgba(34,197,94,0.6)] hover:shadow-[0_0_30px_rgba(34,197,94,0.9)] hover:scale-105 active:scale-95 transition-all duration-300">
               Donate
             </button>
 
