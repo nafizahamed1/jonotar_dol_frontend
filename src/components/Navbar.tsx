@@ -95,11 +95,11 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu */}
-      <div
-        className={`md:hidden bg-gradient-to-b from-red-700 to-green-700 px-4 transition-all duration-300 ${
-          menuOpen ? "max-h-[500px] py-4" : "max-h-0 overflow-hidden"
-        }`}
-      >
+     <div
+  className={`md:hidden bg-gradient-to-b from-red-700 to-green-700 px-4 overflow-hidden transition-all duration-500 ease-in-out ${
+    menuOpen ? "max-h-screen py-4 opacity-100" : "max-h-0 opacity-0"
+  }`}
+>
         <div className="flex flex-col gap-2 text-sm">
 
           {navLinks.map((link) => (
