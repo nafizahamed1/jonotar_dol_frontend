@@ -68,14 +68,19 @@ const [editingId, setEditingId] = useState<number | null>(null);
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black p-4 sm:p-6 text-white relative">
 
   <button
-    onClick={() => navigate("/admin")}
-    className="absolute top-4 left-4 sm:top-6 sm:left-6 z-50 px-4 py-2 rounded-lg
-    text-sm sm:text-base
-    bg-gradient-to-r from-green-600 to-red-600
-    shadow-md hover:scale-105 transition"
-  >
-    ← Back
-  </button>
+  onClick={() => navigate("/admin")}
+  className="absolute top-4 left-4 sm:top-6 sm:left-6 z-50
+  px-3 py-1.5 sm:px-4 sm:py-2
+  text-xs sm:text-sm font-medium text-white
+  rounded-full
+  bg-white/10 backdrop-blur-md border border-white/20
+  shadow-[0_0_15px_rgba(255,255,255,0.2)]
+  hover:bg-white/20 hover:shadow-[0_0_25px_rgba(34,197,94,0.6)]
+  hover:scale-105 active:scale-95
+  transition-all duration-300 flex items-center gap-1"
+>
+  ← <span>Back</span>
+</button>
 
   <div className="max-w-4xl mx-auto">
     <h1 className="text-2xl sm:text-3xl font-bold mb-5 sm:mb-6 text-center sm:text-left text-white">

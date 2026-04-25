@@ -64,16 +64,19 @@ const ManageLeaders = () => {
     <div className="min-h-screen relative bg-gradient-to-br from-black via-gray-900 to-black p-6 text-white">
 
       <button
-        onClick={() => navigate("/admin")}
-        className="absolute top-6 left-6 z-50 px-5 py-2.5 rounded-xl
-        text-white font-medium
-        bg-gradient-to-r from-green-600 to-red-600
-        shadow-lg hover:shadow-[0_0_20px_rgba(34,197,94,0.7)]
-        hover:scale-105 active:scale-95
-        transition-all duration-300"
-      >
-        ← Back
-      </button>
+  onClick={() => navigate("/admin")}
+  className="absolute top-4 left-4 sm:top-6 sm:left-6 z-50
+  px-3 py-1.5 sm:px-4 sm:py-2
+  text-xs sm:text-sm font-medium text-white
+  rounded-full
+  bg-white/10 backdrop-blur-md border border-white/20
+  shadow-[0_0_15px_rgba(255,255,255,0.2)]
+  hover:bg-white/20 hover:shadow-[0_0_25px_rgba(34,197,94,0.6)]
+  hover:scale-105 active:scale-95
+  transition-all duration-300 flex items-center gap-1"
+>
+  ← <span>Back</span>
+</button>
 
       <div className="max-w-5xl mx-auto">
 
