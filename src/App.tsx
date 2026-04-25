@@ -10,6 +10,12 @@ import Contact from "./pages/Contact";
 import Manifesto from "./pages/Manifesto";
 import Mission from "./pages/Mission";
 import Vision from "./pages/Vision";
+
+import Login from "./pages/Login";
+import AdminDashboard from "./pages/AdminDashboard";
+import ManageNews from "./pages/ManageNews";
+import ProtectedRoute from "./components/ProtectedRoute";
+import ManageLeaders from "./pages/ManageLeaders";
 function App() {
   return (
     <BrowserRouter>
@@ -26,6 +32,33 @@ function App() {
           <Route path="/vision" element={<Vision />} />
 
         </Route>
+        <Route path="/login" element={<Login />} />
+        <Route
+          path="/admin"
+          element={
+            <ProtectedRoute>
+              <AdminDashboard />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin/news"
+          element={
+            <ProtectedRoute>
+              <ManageNews />
+            </ProtectedRoute>
+          }
+        />
+
+        <Route
+          path="/admin/leaders"
+          element={
+            <ProtectedRoute>
+              <ManageLeaders />
+            </ProtectedRoute>
+          }
+        />
+
       </Routes>
     </BrowserRouter>
   );
