@@ -77,7 +77,9 @@ const ManageLeaders = () => {
 
       <div className="max-w-5xl mx-auto">
 
-        <h1 className="text-3xl font-bold mb-6">Leader Management</h1>
+        <h1 className="text-2xl sm:text-3xl font-bold mb-5 sm:mb-6 text-center sm:text-left text-white">
+            Leader Management
+            </h1>
 
         <div className="bg-white/10 backdrop-blur-xl border border-white/20 p-6 rounded-2xl mb-8 shadow-lg">
 
