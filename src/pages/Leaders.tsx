@@ -10,31 +10,52 @@ const Leaders = () => {
       name: "বিগ্রেডিয়ার জেনারেল (অবঃ) মোঃ শামীম কামাল",
       position: "চেয়ারম্যান, জনতার দল",
       image: leader1,
+      bio: "",
     },
     {
       _id: "2",
       name: "ডেল এইচ খান",
       position: "প্রধান সমন্বয়ক ও মুখপাত্র, জনতার দল",
       image: leader2,
+      bio: "",
     },
     {
       _id: "3",
       name: "আজম খান",
       position: "মহাসচিব, জনতার দল",
       image: leader3,
+      bio: "",
     },
   ];
 
   return (
-    <div className="container py-10">
-      <h1 className="text-3xl sm:text-4xl font-bold mb-6">
-        Our Leaders
-      </h1>
+    <div className="min-h-screen bg-gradient-to-br from-[#020617] via-[#052e16] to-black text-white py-10 px-4 sm:px-6">
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {leaders.map((leader) => (
-          <LeaderCard key={leader._id} leader={leader} />
-        ))}
+      <div className="max-w-7xl mx-auto">
+
+        <div className="text-center mb-10">
+
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white">
+            Our Leaders
+          </h1>
+
+          
+
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5 sm:gap-6">
+
+          {leaders.map((leader) => (
+            <div
+              key={leader._id}
+              className="hover:scale-[1.02] transition-all duration-300"
+            >
+              <LeaderCard leader={leader} />
+            </div>
+          ))}
+
+        </div>
+
       </div>
     </div>
   );
