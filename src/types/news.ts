@@ -4,4 +4,5 @@ export interface News {
   description: string;
   image?: string;
   createdAt: string;
+  updatedAt: string;
 }
