@@ -4,4 +4,11 @@ export interface Leader {
   position: string;
   image: string;
   bio?: string;
+
+  facebook?: string;
+  twitter?: string;
+  linkedin?: string;
+
+  createdAt?: string;
+  updatedAt?: string;
 }
